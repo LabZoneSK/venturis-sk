@@ -1,0 +1,21 @@
+$venturis-blue: #0B77E6;
+$venturis-logo-blue-dark: #3E73B9;
+$venturis-logo-blue-light: #3E73B9;
+$venturis-yellow: #EDAA0F;
+body {
+  color: $venturis-blue;
+}
+
+.venturis-gradient {
+  background: $venturis-logo-blue-dark;
+  background: -webkit-linear-gradient(to right, $venturis-logo-blue-dark, $venturis-logo-blue-light);
+  background: linear-gradient(to right, $venturis-logo-blue-dark, $venturis-logo-blue-light);
+}
+
+.has-text-venturis-blue {
+  color: $venturis-blue;
+}
+
+.has-text-venturis-yellow {
+  color: $venturis-yellow;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "venturis",
+  "version": "0.0.1",
+  "description": "Venturis.sk site",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "gulp watch-dev",
+    "build": "gulp build"
+  },
+  "keywords": [
+    "venturis",
+    "fcmg",
+    "retail"
+  ],
+  "author": "Martin Starosta",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-util": "^3.0.8",
+    "run-sequence": "^2.2.1"
+  }
+}

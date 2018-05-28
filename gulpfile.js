@@ -61,5 +61,5 @@ gulp.task('build', (cb) => {
 
 /* Watch for changes during development */
 gulp.task('watch-dev', () => {
-  gulp.watch('./src/**', ['styles', 'copy', 'scripts']);
+  gulp.watch('./src/**', ['styles', 'copy', 'scripts', 'images']);
 })

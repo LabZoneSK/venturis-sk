@@ -6,10 +6,14 @@ body {
   color: $venturis-blue;
 }
 
+.hero.is-large .venturis-padding {
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+}
+
 .venturis-gradient {
-  background: $venturis-logo-blue-dark;
-  background: -webkit-linear-gradient(to right, $venturis-logo-blue-dark, $venturis-logo-blue-light);
-  background: linear-gradient(to right, $venturis-logo-blue-dark, $venturis-logo-blue-light);
+  background: url('../images/hero.jpg') no-repeat center;
+  background-size: cover;
 }
 
 .has-text-venturis-blue {
@@ -18,4 +22,20 @@ body {
 
 .has-text-venturis-yellow {
   color: $venturis-yellow;
+}
+
+.hero-item {
+  padding-top: 6rem;
+  .hero-item-body {
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 20px;
+    color:$venturis-logo-blue-dark;
+    position: relative;
+    bottom: 160px;
+  }
+}
+
+.hero-action {
+  position: relative;
+  bottom: 40px;
 }

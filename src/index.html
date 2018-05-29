@@ -13,16 +13,15 @@
 
 <body>
 
-  <header>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
-            <img src="images/logo.png" alt="Venturis.sk: Proffessionals with retail in FMCG - Slovak Republic" width="112" height="28">
-          </a>
-        </div>
+  <header class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="https://venturis.sk">
+          <img src="images/logo.png" alt="Venturis.sk: Proffessionals with retail in FMCG - Slovak Republic" height="50">
+        </a>
       </div>
-    </nav>
+    </div>
+
   </header>
 
   <main>
@@ -42,7 +41,7 @@
                 </p>
                 <p class="subtitle is-5 has-text-white">
                   Retail universe in
-                  <span class="has-text-venturis-yellow ">Slovakia</span>
+                  <span class="has-text-venturis-yellow">Slovakia</span>
                 </p>
               </div>
             </div>
@@ -90,7 +89,7 @@
               </figure>
               <p class="hero-item-body">
                 Representative
-                <br/> office
+                <br/> office in Slovakia
               </p>
             </div>
           </div>
@@ -104,7 +103,8 @@
 
             <div class="columns">
               <div class="column has-text-centered">
-                <a class="button is-link is-inverted">Get in touch</a>
+                <a id="action-button" class="button is-link is-inverted has-text-venturis-blue title is-5">
+                  <i class="far fa-envelope"></i>&nbsp; Get in touch</a>
               </div>
             </div>
           </div>
@@ -119,7 +119,7 @@
         <div class="columns">
           <div class="column has-text-centered">
             <p class="title is-5 has-text-venturis-blue">
-              <span class="has-text-venturis-yellow ">Profesionals</span> with retail background specialised in FMCG with wide knowledge and retailer insight of
+              <span class="has-text-venturis-yellow ">Profesionals</span> with retail background specialized in FMCG with wide knowledge and retailer insight of
               Slovakian market
             </p>
             <p>
@@ -130,6 +130,68 @@
       </div>
     </section>
   </footer>
-</body>
 
+  <div id="contact-form-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <div id="form-content">
+          <h2 class="title">Contact Form</h2>
+          <p class="subtitle">Send us your enquiry and we will come back to you very soon!</p>
+          <form id="contact-form" netlify-honeypot="bot-field" method="POST" netlify>
+
+            <p class="is-hidden">
+              <label>Don’t fill this out if you're human:
+                <input name="bot-field" />
+              </label>
+            </p>
+
+            <div class="field">
+              <label class="label">Name</label>
+              <div class="control">
+                <input class="input" type="text" name="name" placeholder="Enter your name">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Email</label>
+              <div class="control">
+                <input class="input" type="email" name="email" placeholder="Enter your email">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Your Message</label>
+              <div class="control">
+                <textarea class="textarea" placeholder="Tell us more about your business."></textarea>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="control">
+                <label class="checkbox">
+                  <input type="checkbox"> I agree to hear about offers and services from venturis.sk by email.
+                </label>
+              </div>
+            </div>
+
+            <div data-netlify-recaptcha></div>
+
+            <div class="control">
+              <button id="contact-form-submit-btn" class="button is-link">Submit</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="form-thank-you" class="is-hidden">
+          <p class="title">Thank you!</p>
+          <p class="subtitle">Your message has been sent to us. Will come back to you very soon!</p>
+        </div>
+      </div>
+
+    </div>
+    <button id="contact-form-modal-close" class="modal-close is-large" aria-label="close"></button>
+  </div>
+
+  <script defer src="scripts/venturis.js"></script>
+</body>
 </html>

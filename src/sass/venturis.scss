@@ -1,9 +1,13 @@
-$venturis-blue: #0B77E6;
+$venturis-blue: #3E73B9;
 $venturis-logo-blue-dark: #3E73B9;
 $venturis-logo-blue-light: #3E73B9;
 $venturis-yellow: #EDAA0F;
 body {
-  color: $venturis-blue;
+  color: #3E73B9;
+}
+
+.is-hidden {
+  display: none;
 }
 
 .hero.is-large .venturis-padding {
@@ -29,7 +33,7 @@ body {
   .hero-item-body {
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 20px;
-    color:$venturis-logo-blue-dark;
+    color:#3E73B9;
     position: relative;
     bottom: 160px;
   }

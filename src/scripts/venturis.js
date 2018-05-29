@@ -7,6 +7,11 @@ var init = function() {
   var contactModalCloseBtn = document.getElementById('contact-form-modal-close');
   var contactModalOutside = document.querySelector(".modal-background");
 
+  var agreementCheckbox = document.getElementById('agreement');
+  agreementCheckbox.addEventListener('click', function(event) {
+    var state = event.target.checked;
+    contactFormSubmitBtn.disabled = !state;
+  });
 
   var closeModal = function (event) {
     contactModal.classList.remove('is-active');

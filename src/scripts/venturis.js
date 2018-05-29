@@ -13,6 +13,9 @@ var init = function() {
   };
 
   var handleFormSubmit = function (event) {
+    /*
+    Netlify will handle form submission and thank you page.
+    
     event.preventDefault();
 
     var content = document.getElementById('form-content');
@@ -24,7 +27,7 @@ var init = function() {
     setTimeout(function () {
       var form = document.getElementById('contact-form');
       form.submit();
-    }, 1000);
+    }, 1000);*/
   }
 
   actionButton.addEventListener('click', function () {

@@ -2,8 +2,17 @@ $venturis-blue: #3e73b9;
 $venturis-logo-blue-dark: #3e73b9;
 $venturis-logo-blue-light: #3e73b9;
 $venturis-yellow: #edaa0f;
+
+/* Responsivness */
+$gap: 32px;
+$tablet: 769px;
+$desktop: 960px + (2 * $gap);
+$widescreen: 1152px + (2 * $gap);
+
 body {
-  color: #3e73b9;
+  color: $venturis-blue;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Fix Bulma IE11 Modal window issue 
@@ -23,8 +32,16 @@ body {
 }
 
 .venturis-gradient {
-  background: url("../images/hero.jpg") no-repeat center;
+  background: url("../images/hero-mobile.jpg") no-repeat center;
   background-size: cover;
+
+  @media screen and (min-width: $desktop) {
+    background: url("../images/hero.jpg") no-repeat center;
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    background: url("../images/hero-tablet.jpg") no-repeat center;
+  }
 }
 
 .has-text-venturis-blue {
@@ -39,10 +56,20 @@ body {
   padding-top: 6rem;
   .hero-item-body {
     font-family: "Gloria Hallelujah", cursive;
-    font-size: 20px;
+    font-size: 26px;
     color: #3e73b9;
     position: relative;
-    bottom: 160px;
+    bottom: 220px;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 20px;
+      bottom: 160px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+      font-size: 14px;
+      bottom: 120px;
+    }
   }
 }
 

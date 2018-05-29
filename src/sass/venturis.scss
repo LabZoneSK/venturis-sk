@@ -1,9 +1,14 @@
-$venturis-blue: #3E73B9;
-$venturis-logo-blue-dark: #3E73B9;
-$venturis-logo-blue-light: #3E73B9;
-$venturis-yellow: #EDAA0F;
+$venturis-blue: #3e73b9;
+$venturis-logo-blue-dark: #3e73b9;
+$venturis-logo-blue-light: #3e73b9;
+$venturis-yellow: #edaa0f;
 body {
-  color: #3E73B9;
+  color: #3e73b9;
+}
+
+/* Fix Bulma IE11 Modal window issue */
+.modal {
+  flex-direction: column;
 }
 
 .is-hidden {
@@ -16,7 +21,7 @@ body {
 }
 
 .venturis-gradient {
-  background: url('../images/hero.jpg') no-repeat center;
+  background: url("../images/hero.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -31,9 +36,9 @@ body {
 .hero-item {
   padding-top: 6rem;
   .hero-item-body {
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: "Gloria Hallelujah", cursive;
     font-size: 20px;
-    color:#3E73B9;
+    color: #3e73b9;
     position: relative;
     bottom: 160px;
   }

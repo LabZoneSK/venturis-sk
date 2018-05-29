@@ -6,7 +6,9 @@ body {
   color: #3e73b9;
 }
 
-/* Fix Bulma IE11 Modal window issue */
+/* Fix Bulma IE11 Modal window issue 
+@see: https://github.com/jgthms/bulma/issues/460
+*/
 .modal {
   flex-direction: column;
 }

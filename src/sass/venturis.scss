@@ -2,13 +2,12 @@ $venturis-blue: #3e73b9;
 $venturis-logo-blue-dark: #3e73b9;
 $venturis-logo-blue-light: #3e73b9;
 $venturis-yellow: #edaa0f;
-
 /* Responsivness */
+
 $gap: 32px;
 $tablet: 769px;
-$desktop: 960px + (2 * $gap);
-$widescreen: 1152px + (2 * $gap);
-
+$desktop: 960px+(2 * $gap);
+$widescreen: 1152px+(2 * $gap);
 body {
   color: $venturis-blue;
   max-width: 100%;
@@ -18,6 +17,7 @@ body {
 /* Fix Bulma IE11 Modal window issue 
 @see: https://github.com/jgthms/bulma/issues/460
 */
+
 .modal {
   flex-direction: column;
 }
@@ -34,11 +34,9 @@ body {
 .venturis-gradient {
   background: url("../images/hero-mobile.jpg") no-repeat center;
   background-size: cover;
-
   @media screen and (min-width: $desktop) {
     background: url("../images/hero.jpg") no-repeat center;
   }
-
   @media screen and (min-width: $tablet) and (max-width: $desktop) {
     background: url("../images/hero-tablet.jpg") no-repeat center;
   }
@@ -53,27 +51,29 @@ body {
 }
 
 .hero-item {
-  padding-top: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../images/hero-item.svg) no-repeat center;
+  height: 250px;
+  @media screen and (max-width: $tablet) {
+    margin-top: 1em;
+  }
   .hero-item-body {
     font-family: "Gloria Hallelujah", cursive;
-    font-size: 26px;
+    font-size: 22px;
     color: #3e73b9;
-    position: relative;
-    bottom: 220px;
-
-    @media screen and (min-width: $desktop) {
-      font-size: 20px;
-      bottom: 160px;
-    }
-
+    max-width: 70%;
     @media screen and (min-width: $tablet) and (max-width: $desktop) {
-      font-size: 14px;
-      bottom: 120px;
+      font-size: 18px;
     }
   }
 }
 
+.hero-services {
+  padding-top: 2rem;
+}
+
 .hero-action {
-  position: relative;
-  bottom: 40px;
+  padding-top: 1rem;
 }

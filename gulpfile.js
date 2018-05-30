@@ -4,6 +4,7 @@ const clean = require('gulp-clean')
 const cssnano = require('gulp-cssnano')
 const gulp = require('gulp')
 const gutil = require('gulp-util')
+const htmlmin = require('gulp-htmlmin');
 const imagemin = require('gulp-imagemin')
 const runSequence = require('run-sequence')
 const sass = require('gulp-sass')
@@ -19,10 +20,12 @@ gulp.task('clean', () => {
     .pipe(clean())
 })
 
-/* Copy static (HTML, i18n, config.xml) files to BUILD folder */
-gulp.task('copy', () => {
-  gulp.src(['./src/*.html', './src/i18n/*.*']).pipe(gulp.dest('./build'))
-})
+/* Minify HTML */
+gulp.task('minifyHTML', function() {
+  return gulp.src('src/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('build'));
+});
 
 /* Process images */
 gulp.task('images', function () {
@@ -64,10 +67,10 @@ gulp.task('styles', () => {
 
 /* Build widget code */
 gulp.task('build', cb => {
-  runSequence('clean', ['copy', 'scripts', 'styles', 'images'], cb)
+  runSequence('clean', ['minifyHTML', 'scripts', 'styles', 'images'], cb)
 })
 
 /* Watch for changes during development */
 gulp.task('watch-dev', () => {
-  gulp.watch('./src/**', ['styles', 'copy', 'scripts', 'images'])
+  gulp.watch('./src/**', ['styles', 'minifyHTML', 'scripts', 'images'])
 })

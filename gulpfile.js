@@ -76,7 +76,7 @@ gulp.task('styles', () => {
 
 /* Build widget code */
 gulp.task('build', cb => {
-  runSequence('clean', ['minifyHTML', 'scripts', 'styles', 'images', 'copy-server', 'critical'], cb)
+  runSequence('clean', ['minifyHTML', 'scripts', 'styles', 'images', 'copy-server'], 'critical', cb)
 })
 
 gulp.task('critical', () => {

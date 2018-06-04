@@ -3,8 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" >
   <title>Venturis.sk</title>
+  <meta name="description" content="Profesionals with retail background specialized in FMCG with wide knowledge and retailer insight of Slovakian market.">
+  <meta name="keywords" content="FMCG, retail, Slovak market">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
 
   <!-- Google Font -->
@@ -88,7 +91,7 @@
           <div class="hero-action">
             <div class="columns">
               <div class="column has-text-centered">
-                <span class="has-text-white subtitle is-5">Want you know more?</span>
+                <span class="has-text-white subtitle is-5">Want to know more?</span>
               </div>
             </div>
 
@@ -109,6 +112,7 @@
       <div class="container">
         <div class="columns">
           <div class="column has-text-centered">
+            <h2 class="is-hidden">Page Footer</h2>
             <p class="title is-5 has-text-venturis-blue">
               <span class="has-text-venturis-yellow ">Profesionals</span> with retail background specialized in FMCG with wide knowledge and retailer insight of
               Slovakian market
@@ -129,31 +133,31 @@
         <div id="form-content">
           <h2 class="title">Contact Form</h2>
           <p class="subtitle">Send us your enquiry and we will come back to you very soon!</p>
-          <form id="contact-form" netlify-honeypot="bot-field" method="POST" netlify>
+          <form id="contact-form" method="POST" action="https://venturis.sk/server/contact.php">
 
             <p class="is-hidden">
               <label>Don’t fill this out if you're human:
-                <input name="bot-field" />
+                <input name="telephone" type="tel" />
               </label>
             </p>
 
             <div class="field">
-              <label class="label">Name</label>
+              <label for="name" class="label">Name</label>
               <div class="control">
-                <input class="input" type="text" name="name" placeholder="Enter your name">
+                <input id="name" class="input" type="text" name="name" placeholder="Enter your name">
               </div>
             </div>
             <div class="field">
-              <label class="label">Email</label>
+              <label for="email" class="label">Email</label>
               <div class="control">
-                <input class="input" type="email" name="email" placeholder="Enter your email">
+                <input id="email" class="input" type="email" name="email" placeholder="Enter your email">
               </div>
             </div>
 
             <div class="field">
-              <label class="label">Your Message</label>
+              <label for="message" class="label">Your Message</label>
               <div class="control">
-                <textarea name="message" class="textarea" placeholder="Tell us more about your business."></textarea>
+                <textarea id="message" name="message" class="textarea" placeholder="Tell us more about your business."></textarea>
               </div>
             </div>
 

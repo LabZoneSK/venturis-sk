@@ -20,10 +20,18 @@ gulp.task('clean', () => {
     .pipe(clean())
 })
 
+gulp.task('copy-server', () => {
+  return gulp
+    .src('server/**/*')
+    .pipe(gulp.dest('build/server'))
+})
+
 /* Minify HTML */
-gulp.task('minifyHTML', function() {
+gulp.task('minifyHTML', function () {
   return gulp.src('src/*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest('build'));
 });
 
@@ -67,10 +75,17 @@ gulp.task('styles', () => {
 
 /* Build widget code */
 gulp.task('build', cb => {
-  runSequence('clean', ['minifyHTML', 'scripts', 'styles', 'images'], cb)
+  runSequence('clean', ['minifyHTML', 'scripts', 'styles', 'images', 'copy-server'], cb)
 })
 
+
 /* Watch for changes during development */
-gulp.task('watch-dev', () => {
+gulp.task('watch-dev', cb => {
+  runSequence(['watch-server', 'watch-src'], cb)
+})
+gulp.task('watch-server', () => {
+  gulp.watch('./server/**', ['copy-server'])
+})
+gulp.task('watch-src', () => {
   gulp.watch('./src/**', ['styles', 'minifyHTML', 'scripts', 'images'])
 })

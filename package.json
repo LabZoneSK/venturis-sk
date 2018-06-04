@@ -16,6 +16,7 @@
   "author": "Martin Starosta",
   "license": "MIT",
   "devDependencies": {
+    "critical": "^1.3.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-cache": "^1.0.2",

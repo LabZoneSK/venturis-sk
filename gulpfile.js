@@ -1,6 +1,7 @@
 const autoprefixer = require('gulp-autoprefixer')
 const cache = require('gulp-cache')
 const clean = require('gulp-clean')
+const critical = require('critical')
 const cssnano = require('gulp-cssnano')
 const gulp = require('gulp')
 const gutil = require('gulp-util')
@@ -78,6 +79,22 @@ gulp.task('build', cb => {
   runSequence('clean', ['minifyHTML', 'scripts', 'styles', 'images', 'copy-server'], cb)
 })
 
+gulp.task('critical', () => {
+  return critical.generate({
+    inline: true,
+    base: 'build/',
+    src: 'index.html',
+    dest: 'index-critical.html',
+    minify: true,
+    dimensions: [{
+      height: 200,
+      width: 500
+    }, {
+      height: 900,
+      width: 1200
+    }]
+  });
+})
 
 /* Watch for changes during development */
 gulp.task('watch-dev', cb => {

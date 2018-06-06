@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - node
+branches:
+  only:
+    - development
+script:
+  - npm run build
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: node deploy.js
+  on:
+    branch: development

@@ -6,3 +6,6 @@ build
 
 #Server side code
 server
+
+#Environment variables
+.env

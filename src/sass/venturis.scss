@@ -77,3 +77,16 @@ body {
 .hero-action {
   padding-top: 1rem;
 }
+
+.logo {
+  height: 50px;
+  padding: .25rem;
+
+  @media screen and (max-width: $tablet) {
+    margin-left: 25%;
+  }
+
+  @media screen and (max-width: $desktop) and (min-width: $tablet) {
+    margin-left: 1.5rem;
+  }
+}

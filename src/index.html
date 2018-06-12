@@ -5,6 +5,9 @@
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="images/logo-favicon.png">
+  <link rel="canonical" href="https://venturis.sk/">
+
   <title>Your partner for expansion on Slovak retail market | Venturis.sk</title>
   <meta name="description" content="Profesionals with retail background specialized in FMCG with wide knowledge and retailer insight of Slovakian market.">
   <meta name="keywords" content="FMCG, retail, Slovak market">
@@ -41,7 +44,7 @@
     <div class="columns">
       <div class="column">
         <a href="https://venturis.sk">
-          <img src="images/logo.png" alt="Venturis.sk: Proffessionals with retail in FMCG - Slovak Republic" height="50">
+          <img class="logo" src="images/venturis-logo.svg" alt="Venturis.sk: Proffessionals with retail in FMCG - Slovak Republic">
         </a>
       </div>
     </div>
@@ -160,21 +163,25 @@
             <div class="field">
               <label for="name" class="label">Name</label>
               <div class="control">
-                <input id="name" class="input" type="text" name="name" placeholder="Enter your name">
+                <input id="name" class="input is-required" type="text" name="name" placeholder="Enter your name">
               </div>
+              <p class="help is-danger is-hidden">Name should not be empty.</p>
             </div>
+
             <div class="field">
               <label for="email" class="label">Email</label>
               <div class="control">
-                <input id="email" class="input" type="email" name="email" placeholder="Enter your email">
+                <input id="email" class="input is-required" type="email" name="email" placeholder="Enter your email">
               </div>
+              <p class="help is-danger is-hidden">Email should not be empty.</p>
             </div>
 
             <div class="field">
               <label for="message" class="label">Your Message</label>
               <div class="control">
-                <textarea id="message" name="message" class="textarea" placeholder="Tell us more about your business."></textarea>
+                <textarea id="message" name="message" class="textarea is-required" placeholder="Tell us more about your business."></textarea>
               </div>
+              <p class="help is-danger is-hidden">Message should not be empty.</p>
             </div>
 
             <div class="field">

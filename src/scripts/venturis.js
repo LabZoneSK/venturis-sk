@@ -16,10 +16,31 @@ var init = function () {
     contactModal.classList.remove('is-active')
   }
 
+  var toggleErrorMessage = function(fieldElement, show) {
+    var fieldWrapper = fieldElement.parentNode.parentNode
+    fieldWrapper.childNodes.forEach(function(child) {
+      if(child.classList.contains('help')) {
+        (show) ? child.classList.remove('is-hidden') : child.classList.add('is-hidden')
+        return true
+      }
+    })
+  }
+
   var handleFormSubmit = function (event) {
-    /*
     event.preventDefault();
 
+    var requiredFields = document.querySelectorAll('.is-required')
+    requiredFields.forEach(function(field) {
+      if(field.value.length === 0) {
+        field.classList.add('is-danger')
+        toggleErrorMessage(field, true)
+      } else {
+        field.classList.remove('is-danger')
+        toggleErrorMessage(field, false)
+      }
+    });
+
+    /*
     var content = document.getElementById('form-content');
     var thankYou = document.getElementById('form-thank-you');
 
@@ -29,7 +50,7 @@ var init = function () {
     setTimeout(function () {
       var form = document.getElementById('contact-form');
       form.submit();
-    }, 1000); */
+    }, 1000);*/
   }
 
   actionButton.addEventListener('click', function () {

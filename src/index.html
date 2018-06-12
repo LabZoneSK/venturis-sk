@@ -163,21 +163,25 @@
             <div class="field">
               <label for="name" class="label">Name</label>
               <div class="control">
-                <input id="name" class="input" type="text" name="name" placeholder="Enter your name">
+                <input id="name" class="input is-required" type="text" name="name" placeholder="Enter your name">
               </div>
+              <p class="help is-danger is-hidden">Name should not be empty.</p>
             </div>
+
             <div class="field">
               <label for="email" class="label">Email</label>
               <div class="control">
-                <input id="email" class="input" type="email" name="email" placeholder="Enter your email">
+                <input id="email" class="input is-required" type="email" name="email" placeholder="Enter your email">
               </div>
+              <p class="help is-danger is-hidden">Email should not be empty.</p>
             </div>
 
             <div class="field">
               <label for="message" class="label">Your Message</label>
               <div class="control">
-                <textarea id="message" name="message" class="textarea" placeholder="Tell us more about your business."></textarea>
+                <textarea id="message" name="message" class="textarea is-required" placeholder="Tell us more about your business."></textarea>
               </div>
+              <p class="help is-danger is-hidden">Message should not be empty.</p>
             </div>
 
             <div class="field">
